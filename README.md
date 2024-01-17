@@ -1,4 +1,4 @@
-# Sssymbols: quickly find SF Symbols for your projects like never before!
+# Sssymbols: quickly find SF Symbols for your projects
 this project has the goal to make SF Symbols researches easier and more convenients than using the official SF Symbols macOS app.
 you can keep the app always open into your macOS top menu and access it by that way.
 
