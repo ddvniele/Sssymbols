@@ -6,9 +6,9 @@ you can keep the app always open into your macOS top menu and access it by that 
 Unfortunately, there are no planned releases right now :(
 
 ## Screenshots
-<img width="287" alt="Sssymbols!" src="https://github.com/ddvniele/Sssymbols/assets/80768380/ede9617f-171e-4f71-8251-a9c1a975afa8">
-<img width="287" alt="Sssymbols Research" src="https://github.com/ddvniele/Sssymbols/assets/80768380/d31f9af3-bf62-4a7d-b0fa-16a6b3a85f3b">
-<img width="225" alt="Sssymbols Info" src="https://github.com/ddvniele/Sssymbols/assets/80768380/c3c22deb-e294-417b-b70f-abbb3614137c">
+<img width="287" alt="Sssymbols!" src="https://github.com/ddvniele/Sssymbols/assets/80768380/7859bf65-708e-4a3f-8a27-f64586d1c2a9">
+<img width="287" alt="Sssymbols Research" src="https://github.com/ddvniele/Sssymbols/assets/80768380/12d9fdc2-b202-4f72-95e6-caa4cca15a77">
+<img width="225" alt="Sssymbols Info" src="https://github.com/ddvniele/Sssymbols/assets/80768380/dfa0196b-40f8-49ac-9353-54df0ade234e">
 
 ## Usage
 - you can download the latest version of Sssymbols on the [releases page](https://github.com/ddvniele/Sssymbols/releases)
@@ -33,4 +33,4 @@ these features are still a work-in-progress and they're not in the actual latest
 
 ## Changelog
 - v1.0
-  - Initial release# Sssymbols
+  - Initial release
