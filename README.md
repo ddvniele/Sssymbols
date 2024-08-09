@@ -3,7 +3,7 @@ this project has the goal to make SF Symbols researches easier and more convenie
 you can keep the app always open into your macOS top menu and access it by that way.
 
 # ⏱️ Next planned release
-Unfortunately, there are no planned releases right now :(
+- planning on fixing small SF Symbols 6 problems as soon as possible
 
 ## Screenshots
 <img width="287" alt="Sssymbols!" src="https://github.com/ddvniele/Sssymbols/assets/80768380/7859bf65-708e-4a3f-8a27-f64586d1c2a9">
