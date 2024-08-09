@@ -14,10 +14,6 @@ struct SssymbolsApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        WindowGroup {
-            InfoView()
-        } // WINDOW GROUP
-        .windowResizability(.contentSize)
         WindowGroup("Info", id: "infoView") {
             InfoView()
         } // WINDOW GROUP
