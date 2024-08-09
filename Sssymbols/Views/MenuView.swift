@@ -11,10 +11,13 @@ import ServiceManagement
 struct MenuView: View {
     
     // binding symbols class
-    @StateObject var sfsymbols5 = SFSymbols5()
+    @StateObject var sfsymbols = SFSymbols()
     
     // windows control
     @Environment(\.openWindow) var openWindow
+    
+    // SF Symbols 5 or 6
+    @AppStorage("SFSYMBOLS_5_OR_6") var sfsymbols5or6 = 5
     
     // lazy v grid
     let columns: [GridItem] = [
@@ -39,12 +42,46 @@ struct MenuView: View {
                 TextField("Search...", text: $searchText)
                 .textFieldStyle(.roundedBorder)
                 .onChange(of: searchText) {
-                    searchedSymbols = sfsymbols5.allSymbols.filter { $0.self.localizedCaseInsensitiveContains(searchText) }
+                    if sfsymbols5or6 == 5 {
+                        searchedSymbols = sfsymbols.allSymbols5.filter { $0.self.localizedCaseInsensitiveContains(searchText) }
+                    } else if sfsymbols5or6 == 6 {
+                        searchedSymbols = sfsymbols.allSymbols6.filter { $0.self.localizedCaseInsensitiveContains(searchText) }
+                    } // IF ELSE
                 } // ON CHANGE
                 
                 Spacer()
                 
                 Menu(content: {
+                    
+                    Menu(content: {
+                        Button(action: {
+                            sfsymbols5or6 = 6
+                        }, label: {
+                            HStack {
+                                Text("SF Symbols 6")
+                                if sfsymbols5or6 == 6 {
+                                    Spacer()
+                                    Image(systemName: "checkmark")
+                                } // IF
+                            } // HSTACK
+                        }) // BUTTON + label
+                        Button(action: {
+                            sfsymbols5or6 = 5
+                        }, label: {
+                            HStack {
+                                Text("SF Symbols 5 (default)")
+                                if sfsymbols5or6 == 5 {
+                                    Spacer()
+                                    Image(systemName: "checkmark")
+                                } // IF
+                            } // HSTACK
+                        }) // BUTTON + label
+                    }, label: {
+                        Text("SF Symbols version")
+                    }) // MENU + label
+                    
+                    Divider()
+                    
                     Button("Info") {
                         openWindow(id: "infoView")
                     } // BUTTON
@@ -68,7 +105,7 @@ struct MenuView: View {
             ScrollView {
                 LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
                     if searchText == "" {
-                        ForEach(sfsymbols5.allSymbols, id: \.self) { symbol in
+                        ForEach(sfsymbols5or6 == 5 ? sfsymbols.allSymbols5 : sfsymbols.allSymbols6, id: \.self) { symbol in
                             ZStack {
                                 Image(systemName: symbol)
                                 .font(.system(size: 20))
@@ -80,11 +117,11 @@ struct MenuView: View {
                             } // ZSTACK
                             .contextMenu(ContextMenu(menuItems: {
                                 Button("Copy symbol name") {
-                                    sfsymbols5.stringToClipboard(text: symbol)
+                                    sfsymbols.stringToClipboard(text: symbol)
                                 } // BUTTON
                                 Divider()
                                 Button("Copy SwiftUI implementation") {
-                                    sfsymbols5.stringToClipboard(text: "Image(systemName: \(symbol))")
+                                    sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
                                 } // BUTTON
                             })) // CONTEXT MENU
                         } // FOR EACH
@@ -102,11 +139,11 @@ struct MenuView: View {
                             } // ZSTACK
                             .contextMenu(ContextMenu(menuItems: {
                                 Button("Copy symbol name") {
-                                    sfsymbols5.stringToClipboard(text: symbol)
+                                    sfsymbols.stringToClipboard(text: symbol)
                                 } // BUTTON
                                 Divider()
                                 Button("Copy SwiftUI implementation") {
-                                    sfsymbols5.stringToClipboard(text: "Image(systemName: \(symbol))")
+                                    sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
                                 } // BUTTON
                             })) // CONTEXT MENU
                         } // FOR EACH

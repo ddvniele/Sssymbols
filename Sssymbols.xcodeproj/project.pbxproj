@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		649513E52B168CF000D5F79A /* SFSymbols5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649513E42B168CF000D5F79A /* SFSymbols5.swift */; };
+		649513E52B168CF000D5F79A /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649513E42B168CF000D5F79A /* SFSymbols.swift */; };
 		64A08AC82B17BD7900F8FD6D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A08AC72B17BD7900F8FD6D /* InfoView.swift */; };
 		64C23CE42B16237700A14D70 /* SssymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C23CE32B16237700A14D70 /* SssymbolsApp.swift */; };
 		64C23CE62B16237700A14D70 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C23CE52B16237700A14D70 /* MenuView.swift */; };
@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		649513E42B168CF000D5F79A /* SFSymbols5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols5.swift; sourceTree = "<group>"; };
+		649513E42B168CF000D5F79A /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		64A08AC72B17BD7900F8FD6D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		64C23CE02B16237700A14D70 /* Sssymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sssymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C23CE32B16237700A14D70 /* SssymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SssymbolsApp.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		64C23CF22B1623A100A14D70 /* Symbols */ = {
 			isa = PBXGroup;
 			children = (
-				649513E42B168CF000D5F79A /* SFSymbols5.swift */,
+				649513E42B168CF000D5F79A /* SFSymbols.swift */,
 			);
 			path = Symbols;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			files = (
 				64A08AC82B17BD7900F8FD6D /* InfoView.swift in Sources */,
 				64C23CE62B16237700A14D70 /* MenuView.swift in Sources */,
-				649513E52B168CF000D5F79A /* SFSymbols5.swift in Sources */,
+				649513E52B168CF000D5F79A /* SFSymbols.swift in Sources */,
 				64C23CE42B16237700A14D70 /* SssymbolsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -360,7 +360,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
