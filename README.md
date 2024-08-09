@@ -17,12 +17,13 @@ Unfortunately, there are no planned releases right now :(
 
 ## Features
 - no need to switch to the SF Symbols app while doing something on Xcode
-- updated to [SF Symbols 5](https://developer.apple.com/sf-symbols/)
+- partial support to [SF Symbols 6](https://developer.apple.com/sf-symbols/), full support to SF Symbols 5
 - copy symbol name on your clipboard with a right-click
 - copy SwiftUI symbol implementation with a right-click
 
-## What's New (v1.0)
-- Initial release
+## What's New (v1.1)
+- added partial support to SF Symbols 6
+  - SF Symbols 5 is still the default symbols list because SF Symbols 6 is still partially broken. you can switch between this two options in the app menu
 
 ## Working on
 - a way to launch the app at login
@@ -32,5 +33,8 @@ Unfortunately, there are no planned releases right now :(
 these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v1.1
+  - added partial support to SF Symbols 6
+    - SF Symbols 5 is still the default symbols list because SF Symbols 6 is still partially broken. you can switch between this two options in the app menu
 - v1.0
   - Initial release
