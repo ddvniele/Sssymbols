@@ -21,14 +21,13 @@ you can keep the app always open into your macOS top menu and access it by that 
 - copy symbol name on your clipboard with a click or a right-click
 - copy SwiftUI symbol implementation with a right-click
 
-## What's New (v1.2)
-- added option to launch the app at login
-  - thanks to [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)!
-- some small fixes, like:
-  - click on a symbol to copy its name quicker
-  - no info window showing at app launch
-  - refined ui
-  - new sleak dmg file for installation instead of boring zip 🤛🏻
+## What's New (v1.2.1)
+- fixed bugs, such as:
+  - "Copied!" text would never go away
+- small improvements, such as:
+  - you can now see every symbol name by hovering the symbol or with a right-click
+  - changed settings icon
+  - fixed header ui
 
 ## Working on
 - cleaner UI and UX
@@ -37,6 +36,13 @@ you can keep the app always open into your macOS top menu and access it by that 
 these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v1.2.1
+  - fixed bugs, such as:
+    - "Copied!" text would never go away
+  - small improvements, such as:
+    - you can now see every symbol name by hovering the symbol or with a right-click
+    - changed settings icon
+    - fixed header ui
 - v1.2
   - added option to launch the app at login
     - thanks to [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)!
