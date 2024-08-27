@@ -106,13 +106,14 @@ struct MenuView: View {
                     } // BUTTON
                     .keyboardShortcut("q")
                 }, label: {
-                    Image(systemName: "ellipsis.circle")
+                    Image(systemName: "gear")
                 }) // MENU + label
                 .menuStyle(.borderlessButton)
                 .menuIndicator(.hidden)
                 .frame(width: 15, height: 15)
             } // HSTACK
-            .padding(.top, 20)
+            .padding(.top, 15)
+            .padding(.bottom, 10)
             .padding(.horizontal, 20)
             ScrollView {
                 LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
@@ -133,23 +134,42 @@ struct MenuView: View {
                                 .frame(width: 50, height: 50)
                             } // ZSTACK
                             .contextMenu(ContextMenu(menuItems: {
-                                Button("Copy symbol name") {
-                                    sfsymbols.stringToClipboard(text: symbol)
-                                    withAnimation {
-                                        clipboardText = symbol
-                                    } // WITH ANIMATION
-                                } // BUTTON
-                                Divider()
-                                Button("Copy SwiftUI implementation") {
-                                    sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
-                                } // BUTTON
+                                Section(symbol) {
+                                    Button("Copy symbol name") {
+                                        sfsymbols.stringToClipboard(text: symbol)
+                                        withAnimation {
+                                            clipboardText = symbol
+                                            let seconds = 3.0
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                                                if clipboardText == symbol {
+                                                    withAnimation {
+                                                        clipboardText = ""
+                                                    } // WITH ANIMATION
+                                                } // IF
+                                            } // DISPATCH QUEUE
+                                        } // WITH ANIMATION
+                                    } // BUTTON
+                                    Divider()
+                                    Button("Copy SwiftUI implementation") {
+                                        sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
+                                    } // BUTTON
+                                } // SECTION
                             })) // CONTEXT MENU
                             .onTapGesture {
                                 sfsymbols.stringToClipboard(text: symbol)
                                 withAnimation {
                                     clipboardText = symbol
+                                    let seconds = 3.0
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                                        if clipboardText == symbol {
+                                            withAnimation {
+                                                clipboardText = ""
+                                            } // WITH ANIMATION
+                                        } // IF
+                                    } // DISPATCH QUEUE
                                 } // WITH ANIMATION
                             } // ON TAP GESTURE
+                            .help(symbol)
                         } // FOR EACH
                     } else {
                         ForEach(searchedSymbols, id: \.self) { symbol in
@@ -188,7 +208,7 @@ struct MenuView: View {
                 .frame(height: 1)
                 .foregroundStyle(.quaternary)
                 .frame(maxHeight: .infinity, alignment: .top)
-                .padding(.top, 65)
+                .padding(.top, 71)
             } // ZSTACK
         ) // OVERLAY
     } // VAR BODY
