@@ -11,19 +11,24 @@ you can keep the app always open into your macOS top menu and access it by that 
 <img width="225" alt="Sssymbols Info" src="https://github.com/ddvniele/Sssymbols/assets/80768380/dfa0196b-40f8-49ac-9353-54df0ade234e">
 
 ## Usage
-- you can download the latest version of Sssymbols on the [releases page](https://github.com/ddvniele/Sssymbols/releases)
+- you can download the latest version of Sssymbols on the [releases page](https://github.com/ddvniele/Sssymbols/releases/latest)
 - you can download a ZIP of the source files and modify what you'd like to with Xcode
 - you can fork this repo with your updated code or suggest changes [here](https://github.com/ddvniele/Sssymbols/pulls)
 
 ## Features
 - no need to switch to the SF Symbols app while doing something on Xcode
 - partial support to [SF Symbols 6](https://developer.apple.com/sf-symbols/), full support to SF Symbols 5
-- copy symbol name on your clipboard with a right-click
+- copy symbol name on your clipboard with a click or a right-click
 - copy SwiftUI symbol implementation with a right-click
 
-## What's New (v1.1)
-- added partial support to SF Symbols 6
-  - SF Symbols 5 is still the default symbols list because SF Symbols 6 is still partially broken. you can switch between this two options in the app menu
+## What's New (v1.2)
+- added option to launch the app at login
+  - thanks to [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)!
+- some small fixes, like:
+  - click on a symbol to copy its name quicker
+  - no info window showing at app launch
+  - refined ui
+  - new sleak dmg file for installation instead of boring zip 🤛🏻
 
 ## Working on
 - a way to launch the app at login
@@ -33,6 +38,14 @@ you can keep the app always open into your macOS top menu and access it by that 
 these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v1.2
+  - added option to launch the app at login
+    - thanks to [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)!
+  - some small fixes, like:
+    - click on a symbol to copy its name quicker
+    - no info window showing at app launch
+    - refined ui
+    - new sleak dmg file for installation instead of boring zip 🤛🏻
 - v1.1
   - added partial support to SF Symbols 6
     - SF Symbols 5 is still the default symbols list because SF Symbols 6 is still partially broken. you can switch between this two options in the app menu
