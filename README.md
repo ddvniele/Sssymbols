@@ -21,7 +21,7 @@ you can keep the app always open into your macOS top menu and access it by that 
 - copy symbol name on your clipboard with a click or a right-click
 - copy SwiftUI symbol implementation with a right-click
 
-## What's New (v1.2.1)
+## What's New (v1.2.1 - Aug 27, 2024)
 - fixed bugs, such as:
   - "Copied!" text would never go away
 - small improvements, such as:
@@ -36,14 +36,14 @@ you can keep the app always open into your macOS top menu and access it by that 
 these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
-- v1.2.1
+- v1.2.1 - Aug 27, 2024
   - fixed bugs, such as:
     - "Copied!" text would never go away
   - small improvements, such as:
     - you can now see every symbol name by hovering the symbol or with a right-click
     - changed settings icon
     - fixed header ui
-- v1.2
+- v1.2 - Aug 26, 2024
   - added option to launch the app at login
     - thanks to [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern)!
   - some small fixes, like:
@@ -51,8 +51,8 @@ these features are still a work-in-progress and they're not in the actual latest
     - no info window showing at app launch
     - refined ui
     - new sleak dmg file for installation instead of boring zip 🤛🏻
-- v1.1
+- v1.1 - Aug 9, 2024
   - added partial support to SF Symbols 6
     - SF Symbols 5 is still the default symbols list because SF Symbols 6 is still partially broken. you can switch between this two options in the app menu
-- v1.0
+- v1.0 - Jan 17, 2024
   - initial release
