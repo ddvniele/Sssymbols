@@ -31,7 +31,6 @@ you can keep the app always open into your macOS top menu and access it by that 
   - new sleak dmg file for installation instead of boring zip 🤛🏻
 
 ## Working on
-- a way to launch the app at login
 - cleaner UI and UX
 - researches by keywords
 - so much more!
@@ -50,4 +49,4 @@ these features are still a work-in-progress and they're not in the actual latest
   - added partial support to SF Symbols 6
     - SF Symbols 5 is still the default symbols list because SF Symbols 6 is still partially broken. you can switch between this two options in the app menu
 - v1.0
-  - Initial release
+  - initial release
