@@ -13,6 +13,7 @@
 		64C23CE62B16237700A14D70 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C23CE52B16237700A14D70 /* MenuView.swift */; };
 		64C23CE82B16237800A14D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C23CE72B16237800A14D70 /* Assets.xcassets */; };
 		64C23CEB2B16237800A14D70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C23CEA2B16237800A14D70 /* Preview Assets.xcassets */; };
+		64C419AD2C7D4EE200C1FC21 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 64C419AC2C7D4EE200C1FC21 /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C419AD2C7D4EE200C1FC21 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +122,9 @@
 			dependencies = (
 			);
 			name = Sssymbols;
+			packageProductDependencies = (
+				64C419AC2C7D4EE200C1FC21 /* LaunchAtLogin */,
+			);
 			productName = Sssymbols;
 			productReference = 64C23CE02B16237700A14D70 /* Sssymbols.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +153,9 @@
 				Base,
 			);
 			mainGroup = 64C23CD72B16237700A14D70;
+			packageReferences = (
+				64C419AB2C7D4EE200C1FC21 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 64C23CE12B16237700A14D70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,7 +337,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -360,7 +368,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -390,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64C419AB2C7D4EE200C1FC21 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64C419AC2C7D4EE200C1FC21 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64C419AB2C7D4EE200C1FC21 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64C23CD82B16237700A14D70 /* Project object */;
 }
