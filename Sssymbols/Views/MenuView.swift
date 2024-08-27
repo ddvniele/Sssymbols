@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ServiceManagement
+import LaunchAtLogin
 
 struct MenuView: View {
     
@@ -30,12 +31,20 @@ struct MenuView: View {
     @State var searchText: String = ""
     @State var searchedSymbols: [String] = []
     
+    // clipboard text
+    @State var clipboardText: String = ""
+    
     // MARK: body
     var body: some View {
         NavigationStack {
             HStack {
-                Text("Sssymbols!")
-                .font(.system(size: 20, weight: .medium, design: .rounded))
+                VStack {
+                    Text("Sssymbols!")
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    Text("by @ddvniele")
+                    .font(.system(size: 12.5, weight: .light, design: .rounded))
+                    .foregroundStyle(.secondary)
+                } // VSTACK
                 
                 Spacer()
                 
@@ -48,17 +57,25 @@ struct MenuView: View {
                         searchedSymbols = sfsymbols.allSymbols6.filter { $0.self.localizedCaseInsensitiveContains(searchText) }
                     } // IF ELSE
                 } // ON CHANGE
+                .frame(width: 160)
                 
                 Spacer()
                 
                 Menu(content: {
+                    
+                    Button("Info") {
+                        openWindow(id: "infoView")
+                    } // BUTTON
+                    .keyboardShortcut("i")
+                    
+                    Divider()
                     
                     Menu(content: {
                         Button(action: {
                             sfsymbols5or6 = 6
                         }, label: {
                             HStack {
-                                Text("SF Symbols 6")
+                                Text("SF Symbols 6 BETA")
                                 if sfsymbols5or6 == 6 {
                                     Spacer()
                                     Image(systemName: "checkmark")
@@ -80,12 +97,7 @@ struct MenuView: View {
                         Text("SF Symbols version")
                     }) // MENU + label
                     
-                    Divider()
-                    
-                    Button("Info") {
-                        openWindow(id: "infoView")
-                    } // BUTTON
-                    .keyboardShortcut("i")
+                    LaunchAtLogin.Toggle("Launch at login")
                     
                     Divider()
                     
@@ -107,8 +119,13 @@ struct MenuView: View {
                     if searchText == "" {
                         ForEach(sfsymbols5or6 == 5 ? sfsymbols.allSymbols5 : sfsymbols.allSymbols6, id: \.self) { symbol in
                             ZStack {
-                                Image(systemName: symbol)
-                                .font(.system(size: 20))
+                                if clipboardText == symbol {
+                                    Text("Copied!")
+                                    .font(.system(size: 10))
+                                } else {
+                                    Image(systemName: symbol)
+                                    .font(.system(size: 20))
+                                } // IF ELSE
                                 
                                 RoundedRectangle(cornerRadius: 15, style: .continuous)
                                 .foregroundStyle(.gray)
@@ -118,12 +135,21 @@ struct MenuView: View {
                             .contextMenu(ContextMenu(menuItems: {
                                 Button("Copy symbol name") {
                                     sfsymbols.stringToClipboard(text: symbol)
+                                    withAnimation {
+                                        clipboardText = symbol
+                                    } // WITH ANIMATION
                                 } // BUTTON
                                 Divider()
                                 Button("Copy SwiftUI implementation") {
                                     sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
                                 } // BUTTON
                             })) // CONTEXT MENU
+                            .onTapGesture {
+                                sfsymbols.stringToClipboard(text: symbol)
+                                withAnimation {
+                                    clipboardText = symbol
+                                } // WITH ANIMATION
+                            } // ON TAP GESTURE
                         } // FOR EACH
                     } else {
                         ForEach(searchedSymbols, id: \.self) { symbol in
@@ -156,6 +182,15 @@ struct MenuView: View {
             .frame(height: 390)
         } // NAVIGATION STACK
         .frame(width: 350)
+        .overlay(
+            ZStack {
+                Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.quaternary)
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding(.top, 65)
+            } // ZSTACK
+        ) // OVERLAY
     } // VAR BODY
 } // STRUCT MENU VIEW
 

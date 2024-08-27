@@ -29,6 +29,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         
+        // close app info window at launch
+        NSApplication.shared.windows.last!.close()
+        
         // menu view
         let menuView = MenuView()
         
