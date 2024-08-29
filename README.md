@@ -1,4 +1,4 @@
-<img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/75c32ab4-b21b-4f83-a35d-b0828ec59d7f">
+<div align="center"><img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/75c32ab4-b21b-4f83-a35d-b0828ec59d7f"></div>
 
 # Sssymbols: quickly find SF Symbols for your projects
 this project has the goal to make SF Symbols researches easier and more convenients than using the official SF Symbols macOS app.
