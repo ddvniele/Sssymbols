@@ -1,3 +1,5 @@
+<img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/75c32ab4-b21b-4f83-a35d-b0828ec59d7f">
+
 # Sssymbols: quickly find SF Symbols for your projects
 this project has the goal to make SF Symbols researches easier and more convenients than using the official SF Symbols macOS app.
 you can keep the app always open into your macOS top menu and access it by that way.
@@ -6,11 +8,10 @@ you can keep the app always open into your macOS top menu and access it by that 
 - planning on fixing small SF Symbols 6 problems as soon as possible
 
 ## Screenshots
-<img width="287" alt="Sssymbols!" src="https://github.com/ddvniele/Sssymbols/assets/80768380/7859bf65-708e-4a3f-8a27-f64586d1c2a9">
-<img width="287" alt="Sssymbols Research" src="https://github.com/ddvniele/Sssymbols/assets/80768380/12d9fdc2-b202-4f72-95e6-caa4cca15a77">
-<img width="225" alt="Sssymbols Info" src="https://github.com/ddvniele/Sssymbols/assets/80768380/dfa0196b-40f8-49ac-9353-54df0ade234e">
+<img width="200" alt="Sssymbols!" src="https://github.com/user-attachments/assets/5f13290d-70e7-488e-8b80-a9eafc3504b7">
+<img width="325" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/04850c24-fe3a-428f-a4d4-6e4061e1e5ef">
 
-## Usage
+## Download, install & usage
 - you can download the latest version of Sssymbols on the [releases page](https://github.com/ddvniele/Sssymbols/releases/latest)
 - you can download a ZIP of the source files and modify what you'd like to with Xcode
 - you can fork this repo with your updated code or suggest changes [here](https://github.com/ddvniele/Sssymbols/pulls)
