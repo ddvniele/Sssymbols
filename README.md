@@ -22,13 +22,9 @@ you can keep the app always open into your macOS top menu and access it by that 
 - copy symbol name on your clipboard with a click or a right-click
 - copy SwiftUI symbol implementation with a right-click
 
-## What's New (v1.2.1 - Aug 27, 2024)
-- fixed bugs, such as:
-  - "Copied!" text would never go away
-- small improvements, such as:
-  - you can now see every symbol name by hovering the symbol or with a right-click
-  - changed settings icon
-  - fixed header ui
+## What's New (v1.2.2 - Aug 30, 2024)
+big changes are in the air, stay tuned! but for now, only a small fix:
+- fixed a bug where new updates from v1.2 and v1.2.1 wouldn't show on symbols searched with the search bar
 
 ## Working on
 - cleaner UI and UX
@@ -37,6 +33,9 @@ you can keep the app always open into your macOS top menu and access it by that 
 these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v1.2.2 - Aug 30, 2024
+  - big changes are in the air, stay tuned! but for now, only a small fix:
+    - fixed a bug where new updates from v1.2 and v1.2.1 wouldn't show on symbols searched with the search bar
 - v1.2.1 - Aug 27, 2024
   - fixed bugs, such as:
     - "Copied!" text would never go away
