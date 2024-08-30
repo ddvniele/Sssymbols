@@ -174,9 +174,13 @@ struct MenuView: View {
                     } else {
                         ForEach(searchedSymbols, id: \.self) { symbol in
                             ZStack {
-                                Image(systemName: symbol)
-                                .foregroundStyle(.white)
-                                .font(.system(size: 20))
+                                if clipboardText == symbol {
+                                    Text("Copied!")
+                                    .font(.system(size: 10))
+                                } else {
+                                    Image(systemName: symbol)
+                                    .font(.system(size: 20))
+                                } // IF ELSE
                                 
                                 RoundedRectangle(cornerRadius: 15, style: .continuous)
                                 .foregroundStyle(.gray)
@@ -184,14 +188,42 @@ struct MenuView: View {
                                 .frame(width: 50, height: 50)
                             } // ZSTACK
                             .contextMenu(ContextMenu(menuItems: {
-                                Button("Copy symbol name") {
-                                    sfsymbols.stringToClipboard(text: symbol)
-                                } // BUTTON
-                                Divider()
-                                Button("Copy SwiftUI implementation") {
-                                    sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
-                                } // BUTTON
+                                Section(symbol) {
+                                    Button("Copy symbol name") {
+                                        sfsymbols.stringToClipboard(text: symbol)
+                                        withAnimation {
+                                            clipboardText = symbol
+                                            let seconds = 3.0
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                                                if clipboardText == symbol {
+                                                    withAnimation {
+                                                        clipboardText = ""
+                                                    } // WITH ANIMATION
+                                                } // IF
+                                            } // DISPATCH QUEUE
+                                        } // WITH ANIMATION
+                                    } // BUTTON
+                                    Divider()
+                                    Button("Copy SwiftUI implementation") {
+                                        sfsymbols.stringToClipboard(text: "Image(systemName: \(symbol))")
+                                    } // BUTTON
+                                } // SECTION
                             })) // CONTEXT MENU
+                            .onTapGesture {
+                                sfsymbols.stringToClipboard(text: symbol)
+                                withAnimation {
+                                    clipboardText = symbol
+                                    let seconds = 3.0
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                                        if clipboardText == symbol {
+                                            withAnimation {
+                                                clipboardText = ""
+                                            } // WITH ANIMATION
+                                        } // IF
+                                    } // DISPATCH QUEUE
+                                } // WITH ANIMATION
+                            } // ON TAP GESTURE
+                            .help(symbol)
                         } // FOR EACH
                     } // IF ELSE
                 } // LAZY V GRID
