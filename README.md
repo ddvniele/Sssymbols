@@ -1,38 +1,56 @@
-<div align="center"><img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/75c32ab4-b21b-4f83-a35d-b0828ec59d7f"></div>
+<div align="center"><img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/b1d11001-d274-4385-981d-be4eee9d9561"></div>
 
 <div align="center"><h1>Sssymbols: quickly find SF Symbols for your projects</h1></div>
-this project has the goal to make SF Symbols researches easier and more convenients than using the official SF Symbols macOS app.
-you can keep the app always open into your macOS top menu and access it by that way.
+This project has the goal to make SF Symbols researches easier and more convenients than using the official SF Symbols macOS app.
+You can keep the app always open into your macOS top menu and access it by that way.
 
-# ⏱️ Next planned release
-- planning on fixing small SF Symbols 6 problems as soon as possible
+## Works on
+- macOS Sonoma 14.0 or newer
+- iOS 17.0 or newer
 
 ## Screenshots
-<img width="200" alt="Sssymbols!" src="https://github.com/user-attachments/assets/5f13290d-70e7-488e-8b80-a9eafc3504b7">
-<img width="325" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/04850c24-fe3a-428f-a4d4-6e4061e1e5ef">
+<img width="200" alt="Sssymbols!" src="https://github.com/user-attachments/assets/028e41ad-a26a-4916-9d18-3a8892c576bf">
+<img width="200" alt="Sssymbols! Favorites" src="https://github.com/user-attachments/assets/a6986ac2-829c-4689-a98c-fc2966cd28c0">
+<img width="200" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/fe9a40b9-dd57-43bd-a9ad-c4d935df1ce9"><br>
+<img width="200" alt="Sssymbols! iOS" src="https://github.com/user-attachments/assets/4b869278-9b9c-40cb-9f2f-ab24003e30f3">
+<img width="200" alt="Sssymbols! iOS Favorites" src="https://github.com/user-attachments/assets/010fb895-098d-44fd-8e1d-ce098f96abe2">
+<img width="200" alt="Sssymbols! iOS Info" src="https://github.com/user-attachments/assets/be35c491-572e-42ef-be0f-913196f04aca">
+
 
 ## Download, install & usage
-- you can download the latest version of Sssymbols on the [releases page](https://github.com/ddvniele/Sssymbols/releases/latest)
+- you can download the latest version of Sssymbols (both macOS & iOS) on the [releases page](https://github.com/ddvniele/Sssymbols/releases/latest)
 - you can download a ZIP of the source files and modify what you'd like to with Xcode
 - you can fork this repo with your updated code or suggest changes [here](https://github.com/ddvniele/Sssymbols/pulls)
 
 ## Features
 - no need to switch to the SF Symbols app while doing something on Xcode
-- partial support to [SF Symbols 6](https://developer.apple.com/sf-symbols/), full support to SF Symbols 5
+- full support to [SF Symbols 6](https://developer.apple.com/sf-symbols/)
 - copy symbol name on your clipboard with a click or a right-click
-- copy SwiftUI symbol implementation with a right-click
+- keep your favorites symbols always with you with the Favorites section
 
-## What's New (v1.2.2 - Aug 30, 2024)
-big changes are in the air, stay tuned! but for now, only a small fix:
-- fixed a bug where new updates from v1.2 and v1.2.1 wouldn't show on symbols searched with the search bar
+## What's New (v2.0 - Aug 11, 2025)
+sorry for the big wait, but finally i'm back! this is the biggest update i've ever made:
+- new Favorites tab: keep your favorites symbols always with you when you need them the most
+- full support to SF Symbols 6 (SF Symbols 5 removed)
+- new Info tab: no need to open another window anymore
+- you can now change the menu bar icon with every symbol you want
+- and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols/releases/latest)
+- least but not last: small bug fixes and small UI & UX refinements
 
 ## Working on
 - cleaner UI and UX
 - researches by keywords
-- so much more!
-these features are still a work-in-progress and they're not in the actual latest release yet.
+- so much more! these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v2.0 - Aug 11, 2025
+  - sorry for the big wait, but finally i'm back! this is the biggest update i've ever made:
+    - new Favorites tab: keep your favorites symbols always with you when you need them the most
+    - full support to SF Symbols 6 (SF Symbols 5 removed)
+    - new Info tab: no need to open another window anymore
+    - you can now change the menu bar icon with every symbol you want
+    - and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols/releases/latest)
+    - least but not last: small bug fixes and small UI & UX refinements
 - v1.2.2 - Aug 30, 2024
   - big changes are in the air, stay tuned! but for now, only a small fix:
     - fixed a bug where new updates from v1.2 and v1.2.1 wouldn't show on symbols searched with the search bar
