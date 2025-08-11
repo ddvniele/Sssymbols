@@ -8,32 +8,97 @@
 import SwiftUI
 
 struct InfoView: View {
+    
+    // body
     var body: some View {
         VStack {
-            Image("Icon")
-            .resizable()
-            .scaledToFill()
-            .frame(width: 90, height: 90)
-            Text("Sssymbols!")
-            .font(.system(size: 20, weight: .medium, design: .rounded))
-            .padding(.top, 10)
-            Text("Made by @ddvniele")
-            .font(.system(size: 10))
-            .foregroundStyle(.gray)
             HStack {
-                Link("Project on GitHub", destination: URL(string: "https://github.com/ddvniele/Sssymbols")!)
-                Spacer()
-                Rectangle()
-                .fill(.gray)
-                .frame(width: 1, height: 10)
-                Spacer()
-                Link("@ddvniele on GitHub", destination: URL(string: "https://github.com/ddvniele")!)
+                Image("Icon")
+                .resizable()
+                .frame(width: 90, height: 90)
+                
+                VStack {
+                    Text("Sssymbols!")
+                    .font(.system(size: 25, weight: .medium, design: .rounded))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text("open source with ❤️")
+                    .font(.system(size: 12.5, weight: .regular, design: .rounded))
+                    .foregroundStyle(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Link("Project on GitHub", destination: URL(filePath: "https://github.com/ddvniele/Sssymbols")!)
+                    .buttonStyle(.bordered)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                } // VSTACK
+                .padding(.leading, 15)
             } // HSTACK
-            .font(.system(size: 10))
-            .padding(.horizontal, 40)
-            .padding(.top, 10)
+            .padding(.leading, 25)
+            
+            HStack {
+                Image("ddvniele")
+                .resizable()
+                .frame(width: 90, height: 90)
+                
+                VStack {
+                    Text("Dan ツ")
+                    .font(.system(size: 25, weight: .medium, design: .rounded))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text("@ddvniele")
+                    .font(.system(size: 12.5, weight: .regular, design: .rounded))
+                    .foregroundStyle(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Link("@ddvniele on GitHub", destination: URL(filePath: "https://github.com/ddvniele")!)
+                    .buttonStyle(.bordered)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                } // VSTACK
+                .padding(.leading, 15)
+            } // HSTACK
+            .padding(.leading, 25)
+            .padding(.top, 30)
+            
+            HStack {
+                Image("qr")
+                .resizable()
+                .frame(width: 90, height: 90)
+                
+                VStack {
+                    Text("New iOS app!")
+                    .font(.system(size: 25, weight: .medium, design: .rounded))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text("Scan the QR code or click here ↓")
+                    .font(.system(size: 12.5, weight: .regular, design: .rounded))
+                    .foregroundStyle(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Link("Download for iPhone", destination: URL(filePath: "https://github.com/ddvniele")!)
+                    .buttonStyle(.bordered)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                } // VSTACK
+                .padding(.leading, 15)
+            } // HSTACK
+            .padding(.leading, 25)
+            .padding(.top, 30)
         } // VSTACK
-        .frame(width: 300, height: 225)
+        .frame(width: 350, height: 390)
+        .overlay(
+            ZStack {
+                Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.quaternary)
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding(.top, 135)
+                
+                Rectangle()
+                .frame(height: 1)
+                .foregroundStyle(.quaternary)
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding(.top, 255)
+            } // ZSTACK
+        ) // OVERLAY
     } // VAR BODY
 } // STRUCT INFO VIEW
 

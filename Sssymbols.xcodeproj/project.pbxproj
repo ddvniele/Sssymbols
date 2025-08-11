@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644C14922E4A21D300F8213A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C14912E4A21D300F8213A /* FavoritesView.swift */; };
 		649513E52B168CF000D5F79A /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649513E42B168CF000D5F79A /* SFSymbols.swift */; };
 		64A08AC82B17BD7900F8FD6D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A08AC72B17BD7900F8FD6D /* InfoView.swift */; };
 		64C23CE42B16237700A14D70 /* SssymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C23CE32B16237700A14D70 /* SssymbolsApp.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		644C14912E4A21D300F8213A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		649513E42B168CF000D5F79A /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		64A08AC72B17BD7900F8FD6D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		64C23CE02B16237700A14D70 /* Sssymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sssymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				64C23CE52B16237700A14D70 /* MenuView.swift */,
+				644C14912E4A21D300F8213A /* FavoritesView.swift */,
 				64A08AC72B17BD7900F8FD6D /* InfoView.swift */,
 			);
 			path = Views;
@@ -137,7 +140,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					64C23CDF2B16237700A14D70 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644C14922E4A21D300F8213A /* FavoritesView.swift in Sources */,
 				64A08AC82B17BD7900F8FD6D /* InfoView.swift in Sources */,
 				64C23CE62B16237700A14D70 /* MenuView.swift in Sources */,
 				649513E52B168CF000D5F79A /* SFSymbols.swift in Sources */,
@@ -228,6 +232,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 79QAXFUAX6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -293,6 +298,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 79QAXFUAX6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -325,7 +331,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sssymbols/Preview Content\"";
-				DEVELOPMENT_TEAM = 79QAXFUAX6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -337,7 +342,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -356,7 +361,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sssymbols/Preview Content\"";
-				DEVELOPMENT_TEAM = 79QAXFUAX6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -368,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
