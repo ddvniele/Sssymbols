@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct SssymbolsApp: App {
@@ -27,6 +28,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
     var popOver = NSPopover()
     
+    var sfsymbols = SFSymbols()
+    var cancellables = Set<AnyCancellable>()
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         
         // close app info window at launch
@@ -34,6 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // menu view
         let menuView = MenuView()
+        .environmentObject(sfsymbols)
         
         // creating popover
         popOver.behavior = .transient
@@ -50,9 +55,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let menuButton = statusItem?.button {
-            menuButton.image = NSImage(systemSymbolName: "tray.full", accessibilityDescription: nil)
+            menuButton.image = NSImage(systemSymbolName: sfsymbols.menuButtonSymbol, accessibilityDescription: nil)
             menuButton.action = #selector(MenuButtonToggle)
         } // IF LET
+        
+        // real-time updating
+        sfsymbols.$menuButtonSymbol
+        .receive(on: RunLoop.main)
+        .sink { [weak self] newSymbol in
+            if let button = self?.statusItem?.button {
+                button.image = NSImage(systemSymbolName: newSymbol, accessibilityDescription: nil)
+            }
+        }
+        .store(in: &cancellables)
         
     } // FUNC APPLICATION DID FINISH LAUNCHING
     
