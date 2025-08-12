@@ -15,10 +15,9 @@ struct SssymbolsApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        WindowGroup("Info", id: "infoView") {
-            InfoView()
-        } // WINDOW GROUP
-        .windowResizability(.contentSize)
+        Settings {
+            // workaround for no windows on launch. not the cleanest code ever
+        } // SETTINGS
     } // VAR BODY
 } // STRUCT SSSYMBOLS APP
 
@@ -32,9 +31,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var cancellables = Set<AnyCancellable>()
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        
-        // close app info window at launch
-        NSApplication.shared.windows.last!.close()
         
         // menu view
         let menuView = MenuView()

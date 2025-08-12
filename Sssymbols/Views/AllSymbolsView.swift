@@ -1,19 +1,19 @@
 //
-//  FavoritesView.swift
+//  AllSymbolsView.swift
 //  Sssymbols
 //
-//  Created by Dan on 11/08/25.
+//  Created by Dan on 12/08/25.
 //
 
 import SwiftUI
 
-struct FavoritesView: View {
+struct AllSymbolsView: View {
     
     // binding environment object
     @EnvironmentObject var sfsymbols: SFSymbols
     
     // search
-    @Binding var searchFavoritesText: String
+    @Binding var searchText: String
     
     // lazy v grid
     let columns: [GridItem] = [
@@ -26,16 +26,20 @@ struct FavoritesView: View {
     
     // clipboard text
     @Binding var clipboardText: String
+    @Binding var addedToFavorites: String
     @Binding var removedFromFavorites: String
     
-    // MARK: body
+    // body
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                ForEach(searchFavoritesText == "" ? sfsymbols.favoritesSymbols6 : sfsymbols.searchedFavoritesSymbols, id: \.self) { symbol in
+                ForEach(searchText == "" ? sfsymbols.allSymbols6 : sfsymbols.searchedSymbols, id: \.self) { symbol in
                     ZStack {
                         if clipboardText == symbol {
                             Text("Copied!")
+                            .font(.system(size: 10))
+                        } else if addedToFavorites == symbol {
+                            Text("Added!")
                             .font(.system(size: 10))
                         } else if removedFromFavorites == symbol {
                             Text("Removed!")
@@ -72,24 +76,43 @@ struct FavoritesView: View {
                             
                             Divider()
                             
-                            Button(action: {
-                                if let index = sfsymbols.favoritesSymbols6.firstIndex(of: symbol) {
-                                    sfsymbols.removeFromFavorites(index: index)
+                            if sfsymbols.favoritesSymbols6.contains(symbol) {
+                                Button(action: {
+                                    if let index = sfsymbols.favoritesSymbols6.firstIndex(of: symbol) {
+                                        sfsymbols.removeFromFavorites(index: index)
+                                        withAnimation {
+                                            removedFromFavorites = symbol
+                                            let seconds = 3.0
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                                                if removedFromFavorites == symbol {
+                                                    withAnimation {
+                                                        removedFromFavorites = ""
+                                                    } // WITH ANIMATION
+                                                } // IF
+                                            } // DISPATCH QUEUE
+                                        } // WITH ANIMATION
+                                    } // IF LET
+                                }, label: {
+                                    Label("Remove from Favorites", systemImage: "star.slash.fill")
+                                }) // BUTTON + label
+                            } else {
+                                Button(action: {
+                                    sfsymbols.addToFavorites(symbol: symbol)
                                     withAnimation {
-                                        removedFromFavorites = symbol
+                                        addedToFavorites = symbol
                                         let seconds = 3.0
                                         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                                            if removedFromFavorites == symbol {
+                                            if addedToFavorites == symbol {
                                                 withAnimation {
-                                                    removedFromFavorites = ""
+                                                    addedToFavorites = ""
                                                 } // WITH ANIMATION
                                             } // IF
                                         } // DISPATCH QUEUE
                                     } // WITH ANIMATION
-                                } // IF LET
-                            }, label: {
-                                Label("Remove from Favorites", systemImage: "star.slash.fill")
-                            }) // BUTTON + label
+                                }, label: {
+                                    Label("Add to Favorites", systemImage: "star.fill")
+                                }) // BUTTON + label
+                            } // IF ELSE
                         } // SECTION
                     } // CONTEXT MENU
                     .onTapGesture {
@@ -113,17 +136,15 @@ struct FavoritesView: View {
         .frame(width: 350, height: 390)
         .overlay(
             ZStack {
-                if searchFavoritesText != "" && !sfsymbols.favoritesSymbols6.isEmpty && sfsymbols.searchedFavoritesSymbols.isEmpty {
-                    ContentUnavailableView.search(text: searchFavoritesText)
-                } else if sfsymbols.favoritesSymbols6.isEmpty {
-                    ContentUnavailableView("No symbols added to Favorites", systemImage: "star", description: Text("To add a symbol to Favorites, right-click on it and select Add to Favorites"))
-                } // IF ELSE
+                if searchText != "" && sfsymbols.searchedSymbols.isEmpty {
+                    ContentUnavailableView.search(text: searchText)
+                } // IF
             } // ZSTACK
         ) // OVERLAY
     } // VAR BODY
-} // STRUCT FAVORITES VIEW
+} // STRUCT ALL SYMBOLS VIEW
 
 #Preview {
-    FavoritesView(searchFavoritesText: MenuView().$searchFavoritesText, clipboardText: MenuView().$clipboardText, removedFromFavorites: MenuView().$removedFromFavorites)
+    AllSymbolsView(searchText: MenuView().$searchText, clipboardText: MenuView().$clipboardText, addedToFavorites: MenuView().$addedToFavorites, removedFromFavorites: MenuView().$removedFromFavorites)
     .environmentObject(SFSymbols())
 } // PREVIEW

@@ -27,7 +27,7 @@ struct InfoView: View {
                     .foregroundStyle(.gray)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Link("Project on GitHub", destination: URL(filePath: "https://github.com/ddvniele/Sssymbols")!)
+                    Link("Project on GitHub", destination: URL(string: "https://github.com/ddvniele/Sssymbols-macOS")!)
                     .buttonStyle(.bordered)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 } // VSTACK
@@ -50,7 +50,7 @@ struct InfoView: View {
                     .foregroundStyle(.gray)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Link("@ddvniele on GitHub", destination: URL(filePath: "https://github.com/ddvniele")!)
+                    Link("@ddvniele on GitHub", destination: URL(string: "https://github.com/ddvniele")!)
                     .buttonStyle(.bordered)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 } // VSTACK
@@ -74,7 +74,7 @@ struct InfoView: View {
                     .foregroundStyle(.gray)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Link("Download for iPhone", destination: URL(filePath: "https://github.com/ddvniele")!)
+                    Link("Download for iPhone", destination: URL(string: "https://github.com/ddvniele/Sssymbols-iOS")!)
                     .buttonStyle(.bordered)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 } // VSTACK

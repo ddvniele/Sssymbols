@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643CCF892E4AC05A00177543 /* AllSymbolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643CCF882E4AC05A00177543 /* AllSymbolsView.swift */; };
+		643CCF8B2E4AC16000177543 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643CCF8A2E4AC16000177543 /* MenuView.swift */; };
 		644C14922E4A21D300F8213A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C14912E4A21D300F8213A /* FavoritesView.swift */; };
 		649513E52B168CF000D5F79A /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649513E42B168CF000D5F79A /* SFSymbols.swift */; };
 		64A08AC82B17BD7900F8FD6D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A08AC72B17BD7900F8FD6D /* InfoView.swift */; };
 		64C23CE42B16237700A14D70 /* SssymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C23CE32B16237700A14D70 /* SssymbolsApp.swift */; };
-		64C23CE62B16237700A14D70 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C23CE52B16237700A14D70 /* MenuView.swift */; };
 		64C23CE82B16237800A14D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C23CE72B16237800A14D70 /* Assets.xcassets */; };
 		64C23CEB2B16237800A14D70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C23CEA2B16237800A14D70 /* Preview Assets.xcassets */; };
 		64C419AD2C7D4EE200C1FC21 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 64C419AC2C7D4EE200C1FC21 /* LaunchAtLogin */; };
@@ -30,12 +31,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		643CCF882E4AC05A00177543 /* AllSymbolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSymbolsView.swift; sourceTree = "<group>"; };
+		643CCF8A2E4AC16000177543 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		644C14912E4A21D300F8213A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		649513E42B168CF000D5F79A /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		64A08AC72B17BD7900F8FD6D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		64C23CE02B16237700A14D70 /* Sssymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sssymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C23CE32B16237700A14D70 /* SssymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SssymbolsApp.swift; sourceTree = "<group>"; };
-		64C23CE52B16237700A14D70 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		64C23CE72B16237800A14D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64C23CEA2B16237800A14D70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64C23CEC2B16237800A14D70 /* Sssymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sssymbols.entitlements; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643CCF872E4AC04200177543 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				643CCF8A2E4AC16000177543 /* MenuView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		64C23CD72B16237700A14D70 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +84,7 @@
 			children = (
 				64C23CE32B16237700A14D70 /* SssymbolsApp.swift */,
 				64C23CF52B16244700A14D70 /* Views */,
-				64C23CF22B1623A100A14D70 /* Symbols */,
+				64C23CF22B1623A100A14D70 /* Models */,
 				64C23CE72B16237800A14D70 /* Assets.xcassets */,
 				64C23CEC2B16237800A14D70 /* Sssymbols.entitlements */,
 				64C23CE92B16237800A14D70 /* Preview Content */,
@@ -90,20 +100,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		64C23CF22B1623A100A14D70 /* Symbols */ = {
+		64C23CF22B1623A100A14D70 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				649513E42B168CF000D5F79A /* SFSymbols.swift */,
 			);
-			path = Symbols;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		64C23CF52B16244700A14D70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				64C23CE52B16237700A14D70 /* MenuView.swift */,
+				643CCF882E4AC05A00177543 /* AllSymbolsView.swift */,
 				644C14912E4A21D300F8213A /* FavoritesView.swift */,
 				64A08AC72B17BD7900F8FD6D /* InfoView.swift */,
+				643CCF872E4AC04200177543 /* Subviews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,11 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643CCF892E4AC05A00177543 /* AllSymbolsView.swift in Sources */,
 				644C14922E4A21D300F8213A /* FavoritesView.swift in Sources */,
 				64A08AC82B17BD7900F8FD6D /* InfoView.swift in Sources */,
-				64C23CE62B16237700A14D70 /* MenuView.swift in Sources */,
 				649513E52B168CF000D5F79A /* SFSymbols.swift in Sources */,
 				64C23CE42B16237700A14D70 /* SssymbolsApp.swift in Sources */,
+				643CCF8B2E4AC16000177543 /* MenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +354,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -372,7 +384,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
