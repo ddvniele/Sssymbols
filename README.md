@@ -25,21 +25,23 @@ You can keep the app always open into your macOS top menu and access it by that 
 - copy symbol name on your clipboard with a click or a right-click
 - keep your favorites symbols always with you with the Favorites section
 
-## What's New (v2.0 - Aug 11, 2025)
-sorry for the big wait, but finally i'm back! this is the biggest update i've ever made:
-- new Favorites tab: keep your favorites symbols always with you when you need them the most
-- full support to SF Symbols 6 (SF Symbols 5 removed)
-- new Info tab: no need to open another window anymore
-- you can now change the menu bar icon with every symbol you want
-- and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols-iOS/releases/latest)
-- least but not last: small bug fixes and small UI & UX refinements
+## What's New (v2.0.1 - Aug 12, 2025)
+just a small update - had to fix something:
+- completely rewritten code: it's cleaner and faster
+- fixed some buttons & functions that weren't working from previous updates
+- minor bug fixes & UI refinements
 
 ## Working on
 - cleaner UI and UX
-- researches by keywords
+- categories for symbols
 - so much more! these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v2.0.1 - Aug 12, 2025
+  - just a small update - had to fix something:
+    - completely rewritten code: it's cleaner and faster
+    - fixed some buttons & functions that weren't working from previous updates
+    - minor bug fixes & UI refinements
 - v2.0 - Aug 11, 2025
   - sorry for the big wait, but finally i'm back! this is the biggest update i've ever made:
     - new Favorites tab: keep your favorites symbols always with you when you need them the most
