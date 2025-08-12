@@ -6,21 +6,18 @@ You can keep the app always open into your macOS top menu and access it by that 
 
 ## Works on
 - macOS Sonoma 14.0 or newer
-- iOS 17.0 or newer
+- are you looking for the iOS version? [it's here!](https://github.com/ddvniele/Sssymbols-iOS)
 
 ## Screenshots
 <img width="200" alt="Sssymbols!" src="https://github.com/user-attachments/assets/028e41ad-a26a-4916-9d18-3a8892c576bf">
 <img width="200" alt="Sssymbols! Favorites" src="https://github.com/user-attachments/assets/a6986ac2-829c-4689-a98c-fc2966cd28c0">
-<img width="200" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/fe9a40b9-dd57-43bd-a9ad-c4d935df1ce9"><br>
-<img width="200" alt="Sssymbols! iOS" src="https://github.com/user-attachments/assets/4b869278-9b9c-40cb-9f2f-ab24003e30f3">
-<img width="200" alt="Sssymbols! iOS Favorites" src="https://github.com/user-attachments/assets/010fb895-098d-44fd-8e1d-ce098f96abe2">
-<img width="200" alt="Sssymbols! iOS Info" src="https://github.com/user-attachments/assets/be35c491-572e-42ef-be0f-913196f04aca">
+<img width="200" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/fe9a40b9-dd57-43bd-a9ad-c4d935df1ce9">
 
 
 ## Download, install & usage
-- you can download the latest version of Sssymbols (both macOS & iOS) on the [releases page](https://github.com/ddvniele/Sssymbols/releases/latest)
+- you can download the latest version of Sssymbols (macOS) on the [releases page](https://github.com/ddvniele/Sssymbols-macOS/releases/latest)
 - you can download a ZIP of the source files and modify what you'd like to with Xcode
-- you can fork this repo with your updated code or suggest changes [here](https://github.com/ddvniele/Sssymbols/pulls)
+- you can fork this repo with your updated code or suggest changes [here](https://github.com/ddvniele/Sssymbols-macOS/pulls)
 
 ## Features
 - no need to switch to the SF Symbols app while doing something on Xcode
@@ -34,7 +31,7 @@ sorry for the big wait, but finally i'm back! this is the biggest update i've ev
 - full support to SF Symbols 6 (SF Symbols 5 removed)
 - new Info tab: no need to open another window anymore
 - you can now change the menu bar icon with every symbol you want
-- and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols/releases/latest)
+- and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols-iOS/releases/latest)
 - least but not last: small bug fixes and small UI & UX refinements
 
 ## Working on
