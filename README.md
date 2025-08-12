@@ -46,7 +46,7 @@ sorry for the big wait, but finally i'm back! this is the biggest update i've ev
     - full support to SF Symbols 6 (SF Symbols 5 removed)
     - new Info tab: no need to open another window anymore
     - you can now change the menu bar icon with every symbol you want
-    - and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols/releases/latest)
+    - and the biggest surprise: a completely new iOS app that reflects every aspect of the macOS one! you can download it [here](https://github.com/ddvniele/Sssymbols-iOS/releases/latest)
     - least but not last: small bug fixes and small UI & UX refinements
 - v1.2.2 - Aug 30, 2024
   - big changes are in the air, stay tuned! but for now, only a small fix:
