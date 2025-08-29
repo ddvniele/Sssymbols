@@ -16,6 +16,7 @@
 		64C23CE82B16237800A14D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C23CE72B16237800A14D70 /* Assets.xcassets */; };
 		64C23CEB2B16237800A14D70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C23CEA2B16237800A14D70 /* Preview Assets.xcassets */; };
 		64C419AD2C7D4EE200C1FC21 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 64C419AC2C7D4EE200C1FC21 /* LaunchAtLogin */; };
+		64D541D72E5B31F100B07B9D /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 64D541D62E5B31F100B07B9D /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		64C23CE72B16237800A14D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64C23CEA2B16237800A14D70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64C23CEC2B16237800A14D70 /* Sssymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sssymbols.entitlements; sourceTree = "<group>"; };
+		64D541D62E5B31F100B07B9D /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				64C23CF52B16244700A14D70 /* Views */,
 				64C23CF22B1623A100A14D70 /* Models */,
 				64C23CE72B16237800A14D70 /* Assets.xcassets */,
+				64D541D62E5B31F100B07B9D /* AppIcon.icon */,
 				64C23CEC2B16237800A14D70 /* Sssymbols.entitlements */,
 				64C23CE92B16237800A14D70 /* Preview Content */,
 			);
@@ -151,7 +154,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					64C23CDF2B16237700A14D70 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -186,6 +189,7 @@
 			files = (
 				64C23CEB2B16237800A14D70 /* Preview Assets.xcassets in Resources */,
 				64C23CE82B16237800A14D70 /* Assets.xcassets in Resources */,
+				64D541D72E5B31F100B07B9D /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +273,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -328,6 +333,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -337,14 +343,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Sssymbols/Sssymbols.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sssymbols/Preview Content\"";
+				DEVELOPMENT_TEAM = 79QAXFUAX6;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Sssymbols!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
@@ -354,7 +364,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -367,14 +378,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Sssymbols/Sssymbols.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sssymbols/Preview Content\"";
+				DEVELOPMENT_TEAM = 79QAXFUAX6;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Sssymbols!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
@@ -384,7 +399,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddvniele.sssymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

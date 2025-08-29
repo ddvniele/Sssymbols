@@ -33,8 +33,21 @@ struct AllSymbolsView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                ForEach(searchText == "" ? sfsymbols.allSymbols6 : sfsymbols.searchedSymbols, id: \.self) { symbol in
+                ForEach(searchText == "" ? sfsymbols.selectedAllSymbols : sfsymbols.searchedSymbols, id: \.self) { symbol in
                     ZStack {
+                        if #available(macOS 26.0, *), sfsymbols.liquidGlassToggle {
+                            Circle()
+                            .foregroundStyle(.tertiary)
+                            .opacity(0.2)
+                            .frame(width: 50, height: 50)
+                            .glassEffect(.regular)
+                        } else {
+                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .foregroundStyle(.tertiary)
+                            .opacity(0.2)
+                            .frame(width: 50, height: 50)
+                        } // IF ELSE
+                        
                         if clipboardText == symbol {
                             Text("Copied!")
                             .font(.system(size: 10))
@@ -48,11 +61,6 @@ struct AllSymbolsView: View {
                             Image(systemName: symbol)
                             .font(.system(size: 20))
                         } // IF ELSE
-                        
-                        RoundedRectangle(cornerRadius: 15, style: .continuous)
-                        .foregroundStyle(.tertiary)
-                        .opacity(0.2)
-                        .frame(width: 50, height: 50)
                     } // ZSTACK
                     .help(symbol)
                     .contextMenu {
@@ -76,9 +84,9 @@ struct AllSymbolsView: View {
                             
                             Divider()
                             
-                            if sfsymbols.favoritesSymbols6.contains(symbol) {
+                            if sfsymbols.favoritesSymbols.contains(symbol) {
                                 Button(action: {
-                                    if let index = sfsymbols.favoritesSymbols6.firstIndex(of: symbol) {
+                                    if let index = sfsymbols.favoritesSymbols.firstIndex(of: symbol) {
                                         sfsymbols.removeFromFavorites(index: index)
                                         withAnimation {
                                             removedFromFavorites = symbol
@@ -132,12 +140,17 @@ struct AllSymbolsView: View {
                 } // FOR EACH
             } // LAZY V GRID
             .padding(.vertical, 20)
+            .animation(.easeInOut(duration: 0.15), value: searchText)
+            .animation(.easeInOut(duration: 0.15), value: sfsymbols.selectedAllSymbols)
+            .animation(.easeInOut(duration: 0.15), value: sfsymbols.searchedSymbols)
         } // SCROLL VIEW
         .frame(width: 350, height: 390)
         .overlay(
             ZStack {
                 if searchText != "" && sfsymbols.searchedSymbols.isEmpty {
                     ContentUnavailableView.search(text: searchText)
+                    .animation(.easeInOut(duration: 0.15), value: searchText)
+                    .animation(.easeInOut(duration: 0.15), value: sfsymbols.searchedSymbols)
                 } // IF
             } // ZSTACK
         ) // OVERLAY

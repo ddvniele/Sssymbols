@@ -32,8 +32,21 @@ struct FavoritesView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                ForEach(searchFavoritesText == "" ? sfsymbols.favoritesSymbols6 : sfsymbols.searchedFavoritesSymbols, id: \.self) { symbol in
+                ForEach(searchFavoritesText == "" ? sfsymbols.favoritesSymbols : sfsymbols.searchedFavoritesSymbols, id: \.self) { symbol in
                     ZStack {
+                        if #available(macOS 26.0, *), sfsymbols.liquidGlassToggle {
+                            Circle()
+                            .foregroundStyle(.tertiary)
+                            .opacity(0.2)
+                            .frame(width: 50, height: 50)
+                            .glassEffect(.regular)
+                        } else {
+                            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .foregroundStyle(.tertiary)
+                            .opacity(0.2)
+                            .frame(width: 50, height: 50)
+                        } // IF ELSE
+                        
                         if clipboardText == symbol {
                             Text("Copied!")
                             .font(.system(size: 10))
@@ -44,12 +57,8 @@ struct FavoritesView: View {
                             Image(systemName: symbol)
                             .font(.system(size: 20))
                         } // IF ELSE
-                        
-                        RoundedRectangle(cornerRadius: 15, style: .continuous)
-                        .foregroundStyle(.tertiary)
-                        .opacity(0.2)
-                        .frame(width: 50, height: 50)
                     } // ZSTACK
+                    .transition(.opacity)
                     .help(symbol)
                     .contextMenu {
                         Section(symbol) {
@@ -73,7 +82,7 @@ struct FavoritesView: View {
                             Divider()
                             
                             Button(action: {
-                                if let index = sfsymbols.favoritesSymbols6.firstIndex(of: symbol) {
+                                if let index = sfsymbols.favoritesSymbols.firstIndex(of: symbol) {
                                     sfsymbols.removeFromFavorites(index: index)
                                     withAnimation {
                                         removedFromFavorites = symbol
@@ -109,16 +118,24 @@ struct FavoritesView: View {
                 } // FOR EACH
             } // LAZY V GRID
             .padding(.vertical, 20)
+            .animation(.easeInOut(duration: 0.15), value: searchFavoritesText)
+            .animation(.easeInOut(duration: 0.15), value: sfsymbols.favoritesSymbols)
+            .animation(.easeInOut(duration: 0.15), value: sfsymbols.searchedFavoritesSymbols)
         } // SCROLL VIEW
         .frame(width: 350, height: 390)
         .overlay(
             ZStack {
-                if searchFavoritesText != "" && !sfsymbols.favoritesSymbols6.isEmpty && sfsymbols.searchedFavoritesSymbols.isEmpty {
+                if searchFavoritesText != "" && !sfsymbols.favoritesSymbols.isEmpty && sfsymbols.searchedFavoritesSymbols.isEmpty {
                     ContentUnavailableView.search(text: searchFavoritesText)
-                } else if sfsymbols.favoritesSymbols6.isEmpty {
+                    .transition(.opacity)
+                } else if sfsymbols.favoritesSymbols.isEmpty {
                     ContentUnavailableView("No symbols added to Favorites", systemImage: "star", description: Text("To add a symbol to Favorites, right-click on it and select Add to Favorites"))
+                    .transition(.opacity)
                 } // IF ELSE
             } // ZSTACK
+            .animation(.easeInOut(duration: 0.15), value: searchFavoritesText)
+            .animation(.easeInOut(duration: 0.15), value: sfsymbols.favoritesSymbols)
+            .animation(.easeInOut(duration: 0.15), value: sfsymbols.searchedFavoritesSymbols)
         ) // OVERLAY
     } // VAR BODY
 } // STRUCT FAVORITES VIEW
