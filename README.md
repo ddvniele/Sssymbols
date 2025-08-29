@@ -1,17 +1,18 @@
-<div align="center"><img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/b1d11001-d274-4385-981d-be4eee9d9561"></div>
+<div align="center"><img width="125" alt="Sssymbols! Icon" src="https://github.com/user-attachments/assets/971411ba-912b-4b4c-8677-588e889dca84"></div>
 
 <div align="center"><h1>Sssymbols: quickly find SF Symbols for your projects</h1></div>
 This project has the goal to make SF Symbols researches easier and more convenients than using the official SF Symbols macOS app.
 You can keep the app always open into your macOS top menu and access it by that way.
 
 ## Works on
-- macOS Sonoma 14.0 or newer
+- macOS Sequoia 15.0 or newer
+  - are you on macOS Sonoma 14? check out [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
 - are you looking for the iOS version? [it's here!](https://github.com/ddvniele/Sssymbols-iOS)
 
 ## Screenshots
-<img width="200" alt="Sssymbols!" src="https://github.com/user-attachments/assets/028e41ad-a26a-4916-9d18-3a8892c576bf">
-<img width="200" alt="Sssymbols! Favorites" src="https://github.com/user-attachments/assets/a6986ac2-829c-4689-a98c-fc2966cd28c0">
-<img width="200" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/fe9a40b9-dd57-43bd-a9ad-c4d935df1ce9">
+<img width="200" alt="Sssymbols!" src="https://github.com/user-attachments/assets/451f4368-1fed-48c5-9106-dff7514c33fe">
+<img width="200" alt="Sssymbols! Favorites" src="https://github.com/user-attachments/assets/cf4fdca7-c56a-4c53-830f-4ae3109770b2">
+<img width="200" alt="Sssymbols! Info" src="https://github.com/user-attachments/assets/5df7dc00-294c-43e9-953d-1e890339721c">
 
 
 ## Download, install & usage
@@ -21,15 +22,17 @@ You can keep the app always open into your macOS top menu and access it by that 
 
 ## Features
 - no need to switch to the SF Symbols app while doing something on Xcode
-- full support to [SF Symbols 6](https://developer.apple.com/sf-symbols/)
+- partial support to [SF Symbols 7](https://developer.apple.com/sf-symbols/), full support to SF Symbols 6
 - copy symbol name on your clipboard with a click or a right-click
 - keep your favorites symbols always with you with the Favorites section
 
-## What's New (v2.0.1 - Aug 12, 2025)
-just a small update - had to fix something:
-- completely rewritten code: it's cleaner and faster
-- fixed some buttons & functions that weren't working from previous updates
-- minor bug fixes & UI refinements
+## What's New (v3.0 - Aug 29, 2025)
+finally introducing full macOS Tahoe 26 support! this update includes:
+- completely rewritten liquid glass interface (macOS 26+)
+- added support to SF Symbols 7
+- new menu window style: you can move it everywhere you need it, it's not locked under its opening button anymore
+- new animations and performaces improvements
+- dropped macOS Sonoma 15 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 15, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
 
 ## Working on
 - cleaner UI and UX
@@ -37,6 +40,13 @@ just a small update - had to fix something:
 - so much more! these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v3.0 - Aug 29, 2025
+  - finally introducing full macOS Tahoe 26 support! this update includes:
+    - completely rewritten liquid glass interface (macOS 26+)
+    - added support to SF Symbols 7
+    - new menu window style: you can move it everywhere you need it, it's not locked under its opening button anymore
+    - new animations and performaces improvements
+    - dropped macOS Sonoma 15 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 15, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
 - v2.0.1 - Aug 12, 2025
   - just a small update - had to fix something:
     - completely rewritten code: it's cleaner and faster
