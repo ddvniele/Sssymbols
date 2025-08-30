@@ -32,7 +32,7 @@ finally introducing full macOS Tahoe 26 support! this update includes:
 - added support to SF Symbols 7
 - new menu window style: you can move it everywhere you need it, it's not locked under its opening button anymore
 - new animations and performaces improvements
-- dropped macOS Sonoma 15 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 15, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
+- dropped macOS Sonoma 14 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 14, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
 
 ## Working on
 - cleaner UI and UX
@@ -46,7 +46,7 @@ finally introducing full macOS Tahoe 26 support! this update includes:
     - added support to SF Symbols 7
     - new menu window style: you can move it everywhere you need it, it's not locked under its opening button anymore
     - new animations and performaces improvements
-    - dropped macOS Sonoma 15 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 15, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
+    - dropped macOS Sonoma 14 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 14, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
 - v2.0.1 - Aug 12, 2025
   - just a small update - had to fix something:
     - completely rewritten code: it's cleaner and faster
