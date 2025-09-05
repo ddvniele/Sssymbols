@@ -34,18 +34,10 @@ struct FavoritesView: View {
             LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
                 ForEach(searchFavoritesText == "" ? sfsymbols.favoritesSymbols : sfsymbols.searchedFavoritesSymbols, id: \.self) { symbol in
                     ZStack {
-                        if #available(macOS 26.0, *), sfsymbols.liquidGlassToggle {
-                            Circle()
-                            .foregroundStyle(.tertiary)
-                            .opacity(0.2)
-                            .frame(width: 50, height: 50)
-                            .glassEffect(.regular)
-                        } else {
-                            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                            .foregroundStyle(.tertiary)
-                            .opacity(0.2)
-                            .frame(width: 50, height: 50)
-                        } // IF ELSE
+                        Circle()
+                        .foregroundStyle(.tertiary)
+                        .opacity(0.2)
+                        .frame(width: 50, height: 50)
                         
                         if clipboardText == symbol {
                             Text("Copied!")

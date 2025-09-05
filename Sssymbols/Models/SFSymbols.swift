@@ -16,9 +16,6 @@ struct SymbolsStruct {
 
 class SFSymbols: ObservableObject {
     
-    // MARK: liquid glass toggle
-    @Published var liquidGlassToggle: Bool = UserDefaults.standard.object(forKey: "LIQUID_GLASS_TOGGLE") as? Bool ?? true
-    
     // MARK: Search
     @Published var searchedSymbols: [String] = []
     @Published var searchedFavoritesSymbols: [String] = []
@@ -53,10 +50,6 @@ class SFSymbols: ObservableObject {
             SymbolsStruct.init(name: "SF Symbols 6", version: OperatingSystemVersion(majorVersion: 15, minorVersion: 0, patchVersion: 0), symbols: allSymbols6)
         ] // POSSIBLE SYMBOLS
         updateSelectedAllSymbols()
-        if #unavailable(macOS 26) {
-            liquidGlassToggle = false
-            UserDefaults.standard.set(liquidGlassToggle, forKey: "LIQUID_GLASS_TOGGLE")
-        } // IF UNAVAILABLE
     } // INIT
     @Published var selectedSymbols: String = UserDefaults.standard.string(forKey: "SELECTED_SYMBOLS") ?? "SF Symbols 6"
     @Published var selectedAllSymbols: [String] = []
