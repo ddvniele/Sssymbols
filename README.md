@@ -26,13 +26,9 @@ You can keep the app always open into your macOS top menu and access it by that 
 - copy symbol name on your clipboard with a click or a right-click
 - keep your favorites symbols always with you with the Favorites section
 
-## What's New (v3.0 - Aug 29, 2025)
-finally introducing full macOS Tahoe 26 support! this update includes:
-- completely rewritten liquid glass interface (macOS 26+)
-- added support to SF Symbols 7
-- new menu window style: you can move it everywhere you need it, it's not locked under its opening button anymore
-- new animations and performaces improvements
-- dropped macOS Sonoma 14 support to make room for macOS Tahoe 26. if you're on macOS Sonoma 14, check out the [last supported version](https://github.com/ddvniele/Sssymbols-macOS/releases/tag/Release-2.0.1)
+## What's New (v3.0.1 - Sep 05, 2025)
+- fixed liquid glass elements (macOS Tahoe 26)
+- fixed menu bar symbol change behavior
 
 ## Working on
 - cleaner UI and UX
@@ -40,6 +36,9 @@ finally introducing full macOS Tahoe 26 support! this update includes:
 - so much more! these features are still a work-in-progress and they're not in the actual latest release yet.
 
 ## Changelog
+- v3.0.1 - Sep 05, 2025
+  - fixed liquid glass elements (macOS Tahoe 26)
+  - fixed menu bar symbol change behavior
 - v3.0 - Aug 29, 2025
   - finally introducing full macOS Tahoe 26 support! this update includes:
     - completely rewritten liquid glass interface (macOS 26+)
